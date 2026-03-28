@@ -3,13 +3,13 @@ using namespace std;
 
 enum enDays
 {
-    sun = 1,
-    mon,
-    tues,
-    wed,
-    thurs,
-    fri,
-    satur
+    Sun = 1,
+    Mon,
+    Tues,
+    Wed,
+    Thurs,
+    Fri,
+    Satur
 };
 
 int readNumber(const string &message = "")

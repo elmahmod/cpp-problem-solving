@@ -2,7 +2,7 @@
 #include <limits>
 using namespace std;
 
-enum eDay { sun = 1, mon, tue, wed, thu, fri, sat };
+enum eDay { Sun = 1, Mon, Tue, Wed, Thu, Fri, Sat };
 
 eDay readUserChoice()
 {
@@ -40,13 +40,13 @@ string getDayName(eDay day)
 {
     switch(day)
     {
-        case sun: return "Sunday";
-        case mon: return "Monday";
-        case tue: return "Tuesday";
-        case wed: return "Wednesday";
-        case thu: return "Thursday";
-        case fri: return "Friday";
-        case sat: return "Saturday";
+        case Sun: return "Sunday";
+        case Mon: return "Monday";
+        case Tue: return "Tuesday";
+        case Wed: return "Wednesday";
+        case Thu: return "Thursday";
+        case Fri: return "Friday";
+        case Sat: return "Saturday";
         default:  return "Invalid day";
     }
 }

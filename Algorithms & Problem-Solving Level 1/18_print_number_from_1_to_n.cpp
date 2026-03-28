@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 int readPositiveNumber(const string &message = "") // new constant function
@@ -108,7 +109,7 @@ int main()
         {
             // replacing system("pause");
             cout << "\nPress Enter to continue...";
-            cin.get();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // removing buffer inputs
         }
 
     } while (option != 5);

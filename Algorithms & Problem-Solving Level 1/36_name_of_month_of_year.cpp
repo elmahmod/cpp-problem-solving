@@ -3,18 +3,18 @@ using namespace std;
 
 enum enMonths
 {
-    jan = 1,
-    feb,
-    mar,
-    apr,
-    may,
-    jun,
-    jul,
-    aug,
-    sep,
-    oct,
-    nov,
-    dec
+    Jan = 1,
+    Feb,
+    Mar,
+    Apr,
+    May,
+    Jun,
+    Jul,
+    Aug,
+    Sep,
+    Oct,
+    Nov,
+    Dec
 };
 
 int readNumber(const string &message = "")

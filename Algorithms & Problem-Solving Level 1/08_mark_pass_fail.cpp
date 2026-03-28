@@ -3,8 +3,8 @@ using namespace std;
 
 enum enMark
 {
-    fail = 0,
-    pass = 1
+    Fail = 0,
+    Pass = 1
 };
 
 int readNumber(string message)
@@ -24,12 +24,12 @@ int readNumber(string message)
 
 enMark checkMark(int grade)
 {
-    return (grade >= 50) ? pass : fail;
+    return (grade >= 50) ? Pass : Fail;
 }
 
 void printResult(int grade)
 {
-    if (checkMark(grade) == pass)
+    if (checkMark(grade) == Pass)
         cout << "passed" << endl;
     else
         cout << "failed" << endl;

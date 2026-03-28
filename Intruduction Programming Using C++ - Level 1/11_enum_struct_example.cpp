@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-enum eGender { male, female };
-enum eStatus { married, single };
+enum eGender { Male, Female };
+enum eStatus { Married, Single };
 
 struct sAddress
 {
@@ -41,8 +41,8 @@ int main()
     person.lastName = "El-Mahmud";
     person.age = 21;
 
-    person.gender = male;
-    person.status = single;
+    person.gender = Male;
+    person.status = Single;
 
     person.contactInfo.email = "asd@gmail.com";
     person.contactInfo.phone = "515161";

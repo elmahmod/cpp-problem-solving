@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-enum eColor { red = 1, blue, green, yellow };
+enum eColor { Red = 1, Blue, Green, Yellow };
 
 int main()
 {
@@ -13,19 +13,19 @@ int main()
 
     eColor color = static_cast<eColor>(number);
 
-    if (color == red) 
+    if (color == Red) 
     {
         system("color 4F");
     }
-    else if (color == blue)
+    else if (color == Blue)
     {
         system("color 1F");
     }
-    else if (color == green)
+    else if (color == Green)
     {
         system("color 2F");
     }
-    else if (color == yellow)
+    else if (color == Yellow)
     {
         system("color 6F");
     }

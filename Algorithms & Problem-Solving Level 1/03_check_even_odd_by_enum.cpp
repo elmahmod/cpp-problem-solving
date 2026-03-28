@@ -4,8 +4,8 @@ using namespace std;
 
 enum enNumberType
 {
-    odd = 1,
-    even = 2
+    Odd = 1,
+    Even = 2
 };
 
 int readNumber()
@@ -26,27 +26,27 @@ int readNumber()
 enNumberType checkNumberType(int number)
 {
     // advanced
-    return number % 2 == 0 ? even : odd; // use if statement
-}
-
-// do you think this one is better?
-void printNumberType_better(int number)
-{
-    if (checkNumberType(number) == even)
-    {
-        cout << number << " is even\n";
-    }
-    else
-        cout << number << " is odd\n";
+    return number % 2 == 0 ? Even : Odd; // use if statement
 }
 
 void printNumberType(enNumberType numberType)
 {
-    if (numberType == even)
+    if (numberType == Even)
         cout << "even";
     else
         cout << "odd";
 }
+
+// do you think this one is better?
+// void printNumberType_better(int number)
+// {
+//     if (checkNumberType(number) == Even)
+//     {
+//         cout << number << " is even\n";
+//     }
+//     else
+//         cout << number << " is odd\n";
+// }
 
 int main()
 {

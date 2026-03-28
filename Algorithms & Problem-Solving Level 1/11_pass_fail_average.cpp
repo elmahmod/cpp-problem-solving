@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-enum enMark { fail = 0, pass = 1};
+enum enMark { Fail = 0, Pass = 1};
 
 enMark checkMark(float number)
 {
-    return (number >= 50) ? pass : fail;
+    return (number >= 50) ? Pass : Fail;
 }
 
 int readNumber()
@@ -51,7 +51,7 @@ float averageArray(const int nums[], int size)
 void printResult(float avg)
 {
     cout << "\nAverage of numbers is: " << avg << endl;
-    (checkMark(avg) == pass) ? cout << "passed\n" : cout << "failed\n";
+    (checkMark(avg) == Pass) ? cout << "passed\n" : cout << "failed\n";
 }
 
 int main()

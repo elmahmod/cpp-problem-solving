@@ -3,15 +3,15 @@ using namespace std;
 
 // enum = An enum is a distinct type whose value is restricted to a range of values.
 
-enum eColor { red = 10, green, yellow, blue }; // starts from 10 -> 11 → 12 → ...
-enum eGender { male, female };                 // by default starts from 0 → 1
-enum eWeek { sat = 1, sun, mon, tue, wed, thu, fri }; // starts from 1 → 2 → ...
+enum eColor { Red = 10, Green, Yellow, Blue }; // starts from 10 -> 11 → 12 → ...
+enum eGender { Male, Female };                 // by default starts from 0 → 1
+enum eWeek { Sat = 1, Sun, Mon, Tue, Wed, Thu, Fri }; // starts from 1 → 2 → ...
 
 int main() 
 {
-    eColor color = eColor::red;
-    eGender gender = eGender::male;
-    eWeek today = eWeek::tue;
+    eColor color = eColor::Red;
+    eGender gender = eGender::Male;
+    eWeek today = eWeek::Tue;
 
     // printing enum values
     cout << "Color: " << color << endl;  

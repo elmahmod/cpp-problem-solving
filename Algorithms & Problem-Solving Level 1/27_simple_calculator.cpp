@@ -3,10 +3,10 @@ using namespace std;
 
 enum enOperationType
 {
-    add = '+',
-    subtract = '-',
-    multiply = '*',
-    divide = '/'
+    Add = '+',
+    Subtract = '-',
+    Multiply = '*',
+    Divide = '/'
 };
 
 float readNumber(const string &message = "")
@@ -45,13 +45,13 @@ float simpleCalculator(float firstNumber, float secondNumber, enOperationType op
 {
     switch (opType)
     {
-    case add:
+    case Add:
         return firstNumber + secondNumber;
-    case subtract:
+    case Subtract:
         return firstNumber - secondNumber;
-    case multiply:
+    case Multiply:
         return firstNumber * secondNumber;
-    case divide:
+    case Divide:
     {
         if (secondNumber == 0)
         {
