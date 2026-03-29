@@ -28,15 +28,10 @@ int randomNumber(int from, int to)
     return rand() % (to - from + 1) + from;
 }
 
-int *fillArrayRandomly(int &size)
+void fillArrayRandomly(int arr[], int size)
 {
-    size = readPositiveInt("Enter number of elements: ");
-    int *arr = new int[size];
-
     for (int i = 0; i < size; i++)
         arr[i] = randomNumber(1, 10);
-
-    return arr;
 }
 
 void printArray(int arr[], int size)
@@ -60,9 +55,11 @@ int sumArray(int arr[], int size)
 int main()
 {
     srand((unsigned)time(NULL));
-    int size = 0;
-    int*arr = fillArrayRandomly(size);
 
+    int size = readPositiveInt("Enter number of elements: ");
+    int *arr = new int[size];
+
+    fillArrayRandomly(arr, size);
     printArray(arr, size);
 
     cout << "\nSum of all elements is: " << sumArray(arr, size) << endl;

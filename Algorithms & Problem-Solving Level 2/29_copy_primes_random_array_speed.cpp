@@ -30,16 +30,10 @@ int randomNumber(int from, int to)
     return rand() % (to - from + 1) + from;
 }
 
-int* fillArrayRandomly(int &size)
+void fillArrayRandomly(int arr[], int size)
 {
-    size = readPositiveInt("Enter number of elements: ");
-
-    int *arr = new int[size];
-
     for (int i = 0; i < size; i++)
-        arr[i] = randomNumber(1, 100);
-
-    return arr;
+        arr[i] = randomNumber(1, 10);
 }
 
 void printArray(const int arr[], int size, const string &message = "")
@@ -84,12 +78,12 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    int size = 0;
-    int *arr = fillArrayRandomly(size);
+    int size = readPositiveInt("Enter number of elements: ");
+    int *arr = new int[size];
+    fillArrayRandomly(arr, size);
 
     // We are temporarily reserving the largest possible size
     int *arr2 = new int[size];
-
     int primeCount = 0;
     copyPrimesInArray(arr, arr2, size, primeCount);
 

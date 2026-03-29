@@ -28,43 +28,25 @@ int randomNumber(int from, int to)
     return rand() % (to - from + 1) + from;
 }
 
-void fillArrayRandomly(int arr[], int size)
+void printArray(const int arr[], int size, const string &message = "") // more reusable now
 {
-    for (int i = 0; i < size; i++)
-        arr[i] = randomNumber(1, 100);
-}
-
-void printArray(int arr[], int size)
-{
-    cout << "\nArray elements: ";
+    cout << message;
     for (int i = 0; i < size; i++)
         cout << arr[i] << " ";
 
     cout << endl;
 }
 
-int maxNumberInArray(int arr[], int size)
-{
-    int max = arr[0];
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    return max;
-}
+
 
 int main()
 {
     srand((unsigned)time(NULL));
 
     int size = readPositiveInt("Enter number of elements: ");
-    int *arr = new int[size];
-    
-    fillArrayRandomly(arr, size);
-    printArray(arr, size);
-    cout << "Max number is: " << maxNumberInArray(arr, size) << endl;
+    int* arr = new int[size];
 
-    delete[] arr; // !!
+
+    delete[] arr; 
     return 0;
 }

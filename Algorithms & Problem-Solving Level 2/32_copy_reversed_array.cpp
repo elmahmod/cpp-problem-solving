@@ -31,27 +31,24 @@ int randomNumber(int from, int to)
 void fillArrayRandomly(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
-        arr[i] = randomNumber(1, 100);
+        arr[i] = randomNumber(1, 10);
 }
 
-void printArray(int arr[], int size)
+void printArray(const int arr[], int size, const string &message = "") // more reusable now
 {
-    cout << "\nArray elements: ";
+    cout << message;
     for (int i = 0; i < size; i++)
         cout << arr[i] << " ";
 
     cout << endl;
 }
 
-int maxNumberInArray(int arr[], int size)
+void copyReverseArray(const int arr[], int arr2[], int size)
 {
-    int max = arr[0];
     for (int i = 0; i < size; i++)
     {
-        if (arr[i] > max)
-            max = arr[i];
+        arr2[i] = arr[size - 1 - i];
     }
-    return max;
 }
 
 int main()
@@ -60,11 +57,14 @@ int main()
 
     int size = readPositiveInt("Enter number of elements: ");
     int *arr = new int[size];
-    
     fillArrayRandomly(arr, size);
-    printArray(arr, size);
-    cout << "Max number is: " << maxNumberInArray(arr, size) << endl;
+    
+    int *arr2 = new int[size];
+    copyReverseArray(arr, arr2, size);
 
-    delete[] arr; // !!
+    printArray(arr, size, "\nArray 1 elements before shuffle: ");
+    printArray(arr2, size, "\nArray 2 elements after copying as reversed: ");
+
+    delete[] arr;
     return 0;
 }

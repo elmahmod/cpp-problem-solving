@@ -28,15 +28,10 @@ int randomNumber(int from, int to)
     return rand() % (to - from + 1) + from;
 }
 
-int *fillArrayRandomly(int &size)
+void fillArrayRandomly(int arr[], int size)
 {
-    size = readPositiveInt("Enter number of elements: ");
-    int *arr = new int[size];
-
     for (int i = 0; i < size; i++)
         arr[i] = randomNumber(1, 10);
-
-    return arr;
 }
 
 void printArray(const int arr[], int size, const string &message = "") // more reusable now
@@ -58,10 +53,11 @@ int main()
 {
     srand((unsigned)time(NULL));
 
-    int size = 0;
-    int *arr = fillArrayRandomly(size);
-    int *arr2 = new int[size];
+    int size = readPositiveInt("Enter number of elements: ");
+    int *arr = new int[size];
+    fillArrayRandomly(arr, size);
 
+    int *arr2 = new int[size];
     copyArray(arr, arr2, size);
 
     printArray(arr, size, "\nArray 1 elements: ");
