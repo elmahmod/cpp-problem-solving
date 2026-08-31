@@ -33,6 +33,7 @@
 
 # Folders
 Build/
+.zed/
 
 # Misc
 .vscode/
